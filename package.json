@@ -1,0 +1,25 @@
+{
+  "name": "prominence",
+  "description": "Call a callback-based function as ES6 Promise",
+  "version": "0.0.0",
+  "author": "Nao Yonamine <mohayonao@gmail.com>",
+  "bugs": {
+    "url": "https://github.com/mohayonao/prominence/issues"
+  },
+  "files": [
+    "package.json",
+    "README.md",
+    "index.js"
+  ],
+  "homepage": "https://github.com/mohayonao/prominence/",
+  "keywords": [
+    "webaudioapi",
+    "buffer"
+  ],
+  "licenses": "MIT",
+  "main": "./index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mohayonao/prominence.git"
+  }
+}
