@@ -1,15 +1,22 @@
 {
   "name": "prominence",
   "description": "Call a callback-based function as ES6 Promise",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "author": "Nao Yonamine <mohayonao@gmail.com>",
   "bugs": {
     "url": "https://github.com/mohayonao/prominence/issues"
   },
+  "devDependencies": {
+    "babel": "^4.7.8",
+    "isparta": "^2.2.0",
+    "jshint": "^2.6.3",
+    "jshint-stylish": "^1.0.1",
+    "mocha": "^2.2.1"
+  },
   "files": [
     "package.json",
     "README.md",
-    "index.js"
+    "lib"
   ],
   "homepage": "https://github.com/mohayonao/prominence/",
   "keywords": [
@@ -17,9 +24,16 @@
     "buffer"
   ],
   "licenses": "MIT",
-  "main": "./index.js",
+  "main": "./lib/prominence.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/mohayonao/prominence.git"
+  },
+  "scripts": {
+    "build": "babel src --out-dir lib",
+    "cover": "babel-node node_modules/.bin/isparta cover --report text --report html --report lcov node_modules/.bin/_mocha",
+    "lint": "jshint src test --reporter node_modules/jshint-stylish/stylish.js",
+    "test": "mocha",
+    "travis": "npm run lint && npm run test"
   }
 }
