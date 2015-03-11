@@ -16,7 +16,7 @@
   "files": [
     "package.json",
     "README.md",
-    "index.js"
+    "lib"
   ],
   "homepage": "https://github.com/mohayonao/prominence/",
   "keywords": [
@@ -24,7 +24,7 @@
     "buffer"
   ],
   "licenses": "MIT",
-  "main": "./index.js",
+  "main": "./lib/prominence.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/mohayonao/prominence.git"
