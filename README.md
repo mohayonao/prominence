@@ -23,6 +23,7 @@ ES6 Promise
 
 ```js
 import fs from "fs";
+import prominence from "prominence";
 
 prominence(fs, "readFile", [ filepath, "utf-8" ]).then((text) => {
   console.log(text);
@@ -33,13 +34,13 @@ ES7 Async/Await
 
 ```js
 import fs from "fs";
+import prominence from "prominence";
 
-async function readFile(filepath) {
+let example = async (filepath) => {
   let text = await prominence(fs, "readFile", [ filepath, "utf-8" ]);
 
   console.log(text);
-}
-
+};
 ```
 
 ## Contributing
