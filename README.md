@@ -3,6 +3,8 @@
 [![NPM Version](http://img.shields.io/npm/v/prominence.svg?style=flat-square)](https://www.npmjs.org/package/prominence)
 [![License](http://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](http://mohayonao.mit-license.org/)
 
+> Call a callback-based function as ES6 Promise
+
 ## Installation
 
 ### NPM
