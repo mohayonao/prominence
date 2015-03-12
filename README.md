@@ -15,7 +15,7 @@ npm install prominence
 
 ## API
 
-- `prominenct(context: object): Prominence`
+- `prominence(context: object): Prominence`
 - `prominence(context: object, methodName: string, [ args: any[] ]): Promise<any>`
 
 ## Examples
@@ -26,7 +26,7 @@ ES6 Promise
 import fs from "fs";
 import prominence from "prominence";
 
-// use Prominence proxy
+// use Prominence Proxy
 prominence(fs).readFile(filepath, "utf-8").then((text) => {
   console.log(text);
 }).catch(console.error.bind(console));
