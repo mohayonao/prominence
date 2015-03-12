@@ -15,6 +15,7 @@ npm install prominence
 
 ## API
 
+- `prominenct(context: object): Prominence`
 - `prominence(context: object, methodName: string, [ args: any[] ]): Promise<any>`
 
 ## Examples
@@ -25,6 +26,12 @@ ES6 Promise
 import fs from "fs";
 import prominence from "prominence";
 
+// use Prominence proxy
+prominence(fs).readFile(filepath, "utf-8").then((text) => {
+  console.log(text);
+}).catch(console.error.bind(console));
+
+// not use a proxy
 prominence(fs, "readFile", [ filepath, "utf-8" ]).then((text) => {
   console.log(text);
 }).catch(console.error.bind(console));
@@ -36,7 +43,15 @@ ES7 Async/Await
 import fs from "fs";
 import prominence from "prominence";
 
-let example = async (filepath) => {
+// use Prominence Proxy
+async (filepath) => {
+  let text = await prominence(fs).readFile(filepath, "utf-8");
+
+  console.log(text);
+};
+
+// not use a proxy
+async (filepath) => {
   let text = await prominence(fs, "readFile", [ filepath, "utf-8" ]);
 
   console.log(text);
